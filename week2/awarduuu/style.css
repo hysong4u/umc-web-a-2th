@@ -1,0 +1,71 @@
+/* css 문법
+    선택자 { css 속성 : value; } */
+/* 태그, 클래스, id */
+
+/* css dinner - 선택자를 연습할 수 있는 게임! 꼭 해보기 */
+
+/* 선택자 */
+
+/* 적용 우선순위
+1. id
+2. class
+3. tag
+*/
+
+/* !important는 항상 우선! */
+
+/* 태그 */
+div {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    font-size: 30px;
+    background-color: pink;
+}
+
+/* 클래스 */
+.lightblue {
+    background-color: lightblue;
+}
+
+.orange {
+    background-color: orange;
+}
+
+/* id */
+
+#yellow {
+    background-color: yellow;
+}
+
+#green {
+    background-color: green;
+}
+
+/* 가상 선택자 */
+
+/* hover */
+/* 커서를 올릴 시 */
+div:hover {
+    background-color: gray;
+}
+/* class와 가상선택자의 우선순위는 동일하여 id에는 적용이 안된다. */
+
+#green:hover{
+    background-color: gray;
+}
+
+/* active */
+/* 클릭하고 있을 시 */
+div:active{
+    background-color: purple;
+}
+
+/* focus */
+/* 한번 눌렀다 떼도 유지, 다른 곳을 클릭하면 원상태 복귀 */
+input:focus{
+    background-color: blue;
+}
+
+
+
