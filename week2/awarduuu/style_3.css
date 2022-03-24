@@ -1,0 +1,75 @@
+/* flex-box */
+
+/*
+웹페이지를 구성할 때 가장 중요한 작업 중 하나가 layout 설정하기이다.
+layout을 구성하하는 element tag들은 구분하기 위한 빈 공간이 항상 존재한다.
+만약 빈 공간을 없애고 layout을 구성하고 싶다면 어떻게 해야할까? 
+바로 이 문제를 해결하기 위한 방법이 바로 flex-box이다. */
+
+/* # flexbox froggy 웹사이트에서 연습해보기! */
+
+/* 전체 선택자로 기본 설정 */
+* {
+    /* margin, padding 없애기 */
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.flex-container {
+    background-color: teal;
+    /* inline-block처럼 좌에서 우로 정렬! */
+    display:flex;
+
+    /* flex-directon */
+    /* main-axis를 설정하는 property */
+    /* row, row-reverse, column, column-reverse 값을 가질 수 있다. */
+    /* flex-direction: column-reverse; */
+
+    /* justify-content */
+    /* 컨텐츠 수평 정렬 속성 */
+    /* flex-start, flex-end, center, space-between, space-evenly, space-around */
+    justify-content: space-between;
+
+    /* align-items */
+    /* 컨텐트 수직 정렬 속성 */
+    align-items: baseline;
+
+    height: 100vh;
+
+    /* flex-wrap */
+    /* 컨텐츠 크기를 유지하며 컨텐츠가 초과될 경우 다음줄로 넘기는 property */
+    flex-wrap:wrap;
+
+    /* align-conent */
+    /* justify-content와 align-items를 합친 속성 */
+    /* flex-start, flex-end, center, stretch, space-between, space-around */
+}
+
+.flex-item {
+    background-color: tomato;
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/* flex-grow */
+/* 너비를 늘렸때 컨텐츠 크기를 얼마나 늘릴 것인지 정하는 property */
+
+/* flex-shrink */
+/* 너비를 줄였 때 컨텐츠 크기를 얼마나 줄일 것인지 정하는 property */
+
+/* flex-basis */
+
+.flex-item:nth-child(4) {
+    /* flex-grow: 3; */
+    flex-shrink: 3;
+}
+
+.flex-item:nth-child(5) {
+    /* flex-grow: 2; */
+    flex-shrink: 2;
+}

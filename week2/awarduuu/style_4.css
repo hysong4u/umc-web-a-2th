@@ -1,0 +1,41 @@
+/* positon */
+/* static, relative, absolute, fixed, sticky */
+
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+.container {
+    background-color: pink;
+    margin:10px;
+    position:relative;
+    height: 200vh;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    font-size: 30px;
+    font-weight: bold;
+    border: 3px solid black;
+}
+
+.item:nth-child(2) {
+    position:sticky;
+    top:0;
+    left:0;
+    /* top:100px;
+    left:300px;
+    z-index: 2; */
+}
+/* 
+.item:nth-child(6) {
+    position: relative;
+    top:-350px;
+    left:350px;
+    z-index:1;
+} */
+
