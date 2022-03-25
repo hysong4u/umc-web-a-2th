@@ -1,0 +1,73 @@
+/* property */
+
+
+
+/* 인라인 엘레멘트 : contents 크기만큼 자리를 차지
+블록 엘레멘트 : contents 크기 상관 없이 한 줄을 차지 */
+
+/* 예시:
+    inline : span, a, img, button
+    block : p, div, ul, li, h1-h6
+ */
+
+ /* /* 두 속성으로 나누는 이유는 요소의 크기를 지정할 때 방법이 다르기 때문에 중요하다. */ */
+
+
+/* display 속성을 통해 element 속성을 바꿀 수 있다. */
+/* display는 none block inline inline-block 이 있다 */
+
+*{
+    box-sizing: border-box; /* padding이나 margin을 줄때 요소크기는 늘어나지 않음*/
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 16px;
+}
+p, span{
+    /* display: inline-block; */
+    width: 100px;
+    height: 100px;
+}
+p{
+    background-color: coral;
+}
+/* nth-child : 같은 자식 중 n번째 자식만 */
+p:nth-child(3) {
+    background-color: bisque;
+    display: inline-block;
+    margin: 5px 10px 20px 30px;
+    margin-right: 50px;
+    padding: 20px;
+    border: 5px solid black;
+    border-top-width: 15px;
+}
+span{
+    background-color: cyan;
+    display: block;
+  
+}
+
+/* ------------------------------------------------ */
+
+/* 단위 */
+/* 단위에는 px ,% , em , rem 등이 있다. */
+/* px은 절대단위 , 나머지는 상대단위(반응형) */
+
+/* 주로 % 는 width 나 height 에 */
+/* em , rem 은 폰트크기, 마진, 패딩에 */
+
+/* 요즘 반응형 페이지가 유행이니 px 말고 나머지 권고 */
+
+div{
+    margin-top: 20px;
+    background-color: lightblue;
+    font-size: 1.5rem; /*rem은 최상위html을 기준으로*/
+    width: 200px;
+    height: 200px;
+}
+div span {
+    font-size: 1.2em; /*em은 부모 요소 div을 기준으로*/
+    height: 80%;
+    width: 100%;
+}

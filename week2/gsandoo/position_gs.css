@@ -1,0 +1,77 @@
+/* position */
+
+/* position 의 종류 : */
+/* 
+1. absolute
+2.relative
+3.sticky
+4.fixed
+5.static (기본값) 
+*/
+
+/*position 은 top bottom right left 로 위치를 변경할 수 있다.  */
+
+/* relative = 자기 자신의 원래 위치를 기준으로 삼는다. */
+
+
+
+/* absolute = 상위태그를 기준으로 삼고 위치를 잡는다. 상위태그의 포지션이 정해지지 않을 시 body를 기준으로 움직인다. */
+
+/* absolute를 사용하면 기존 html 의 문맥에서 벗어나 다른 레이어로써 움직인다. 아예 다른 레이어 이기 때문에 겹칠 위험이 있다. */
+
+/* 보통 absolute는 상위태그의 relative 와 함께 사용된다. 상위태그의 범위에 맞게 움직이기 때문*/
+
+/* 부모 태그에 relative , 자식 태그에 absolute 를 주고 부모를 기준으로 자식을 움직인다 */
+
+/* relative는 단독 사용 시 static 과 같이 그 자리에 그대로 있는다. */
+
+
+
+
+/* fixed = 웹사이트에 보면 스크롤 해도 움직이지 않는 부분을 fixed로 설정한 것 */
+
+/* fixed 또한 html 문맥에서 나와 독단적으로 움직인다. */
+
+/*absolute= 부모를 기준
+  fixed=뷰포트(화면)을 기준 */
+
+
+
+
+/* sticky = 기준을 자기 자신으로 잡으며 스크롤 할 시 뷰포트 상 자신의 위치에 붙어서 계속 있는다. */
+
+/* sticky는 방향 설정이 필수. 그것을 기준으로 붙기 떄문 */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+  }
+  .container{
+    background-color:pink;
+    margin: 10px;
+    
+    height: 200vh;
+  }
+  .item{
+    width: 100px;
+    height: 100px;
+    background-color:lightblue;
+    border: 3px solid black;
+    font-weight:bold;
+    font-size:30px;
+  }
+  .item:nth-child(2){
+    position: sticky;
+    top: 100px;
+    left: 100px;
+    background-color: green;
+  }
+  /* .item:nth-child(6){
+    background-color: orange;
+    position: relative;
+    top: -300px;
+    left: 200px;
+    z-index:2;
+  } */
