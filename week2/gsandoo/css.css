@@ -1,0 +1,53 @@
+/* css 문법: 선택자 { css 속성: value; } */
+/* 태그 클래스 id */
+/* !important > id > class 순으로 우선순위 결정*/
+/* 가상선택자는 : 로 쓰며 hover,active,focus 등이 있다 */
+
+div{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    font-size: 30px;
+    background-color: pink;
+}
+.orange{
+    background-color: orange;
+}
+
+/* 클래스는 .*/
+.lightblue{     
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    font-size: 30px;
+    background-color: lightblue;
+}
+/* id는# , 그리고 한번만 적용 가능*/
+#brown{         
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    font-size: 30px;
+    background-color: brown;
+}
+/*class는 id보다 우선순위가 낮기때문에 적용안됌*/
+.green{   
+    background-color: green;
+}
+/* hover 는 요소가 커서에 닿았을 때 */
+div:hover{
+    background-color: blue;
+
+}
+
+#brown:hover{
+    background-color: blueviolet;
+}
+/* ACTIVE는 요소를 눌렀을떄 */
+div:active{
+    background-color: chartreuse;
+}
+/* focus 는 포커싱이 맟춰질 떄 */
+input:focus{
+    background-color: deeppink;
+}
