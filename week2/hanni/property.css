@@ -1,0 +1,54 @@
+/* inline : span, a, img, button (콘텐츠 크기만큼 차지)
+block : p, div, ul, li, h1-6 (콘텐츠 크기에 상관없이 한 줄 차지) */
+
+*{
+    box-sizing: border-box; 
+}
+
+html{
+    font-size: 16px;
+}
+
+p, span{
+    width: 100px;
+    height: 100px;
+}
+
+p{
+    background-color: coral;
+    /* display: inline-block;*/
+}
+
+span{
+    background-color: teal;
+     display: block;  
+}
+
+/* 
+절대단위 px
+상대단위
+    rem: html 태그 기준
+    em: 부모요소 기준
+*/
+
+p:nth-child(3) {
+    margin: 5px 10px 20px 30px; /* 시계방향으로 적용*/
+    margin-right: 50px;
+    padding: 20px;
+    border: 5px solid blue;
+    border-top-width: 15px;
+}
+
+div{
+    margin-top: 20px;
+    background-color: lightblue;
+    width: 200px;
+    height: 200px;
+    font-size: 1.5rem; 
+}
+
+div span {
+    font-size: 1.2em; 
+    height: 80%;
+    width: 100%;
+}

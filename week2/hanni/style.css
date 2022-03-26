@@ -1,0 +1,47 @@
+/* css 문법 : 선택자 {css 속성 : value;} */
+/* 태그, 클래스, id */
+
+/* class : 동일한 class 이름을 여러 element에서 줄 수 있음
+    id : 동일한 id 값을 가진 element는 하나여야함 */
+
+/*css 스타일 중복 시 우선 순위 id -> class -> tag (!important 우선 적용) */
+
+div{
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    font-size: 30px;
+    background-color : pink 
+}
+
+.orange{
+    background-color: orange;
+}
+
+.lightblue{     
+    background-color: lightblue;
+}
+
+#yellow  {      
+    background-color:  yellow ;
+}
+
+#green{   
+    background-color: green;
+}
+
+
+div hover{ /* 가상 선택자 */
+    background-color: grey;
+}
+
+#green:hover{
+    background-color: grey;
+}
+
+div:active{
+    background-color: purple;
+}
+input:focus{
+    background-color: blue;
+}
