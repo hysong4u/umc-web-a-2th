@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+
+.container {
+    background-color: pink;
+    margin: 10px;
+}
+
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    font-size: 30px;
+    font-weight: bold;
+    border: 3px solid black;
+}
+
+.itme:nth-child(2) {
+    position: sticky;
+    top: 50px
+    left: 0;
+}
+
+.itme:nth-child(6) {
+    position: relative;
+    top: -350px;
+    left: 350px;
+    z-index: 1;
+}
