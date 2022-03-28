@@ -1,0 +1,42 @@
+/* css 문법: 선택자 {clss 속성: value;} */
+/* 태그, 클래스, id */
+
+div{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  font-size: 30px;
+  background-color:pink;
+}
+
+.orange {
+  background-color: orange;
+}
+
+.lightblue {
+  background-color: lightblue;
+}
+
+#yellow {
+  background-color: yellow;
+}
+
+#green {
+  background-color: green;
+}
+
+div:hover {
+  background-color:grey;
+}
+
+#green:hover{
+  background-color:grey;
+}
+
+div:active {
+  background-color: purple;
+}
+
+input:focus {
+  background-color:blue;
+}
