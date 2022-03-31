@@ -1,0 +1,131 @@
+/* 클론코딩 - 글꼴
+    1. whatfont 사용 하여 폰트 알아내기
+    2. 폰트 검색 후 구글폰트 이용하여 폰트 담기
+    3. 폰트 링크를 복붙하여 헤드 태그 안에 넣는다.
+    4. css에서 font-family 속성으로 구글 폰트에 있는 내용을 붙혀 넣어준다. */
+
+
+
+/* global */
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+button {
+    border: none;
+    background-color: transparent; /*transparent : 투명*/
+    cursor: pointer;               /*hover 시 마우스 포인터 손모양으로 변경*/    
+}
+a , a:active{
+    text-decoration:none;         /*밑줄 없애줌*/  
+    color: inherit;               /*상속*/
+}
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+
+/* nav bar */
+
+nav{
+    padding: 0px 16px;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 56px;
+    background-color: white;
+}
+.nav-icon{
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+.nav-button{
+    padding: 8px;
+}
+
+
+/* nav-left */
+
+
+#logo{
+    box-sizing: content-box;
+    width: 90px;
+    height: 20px;
+    padding: 18px 14px 18px 16px;
+}
+#nav-country{
+    margin: 12px 0 0 -10px;
+    color: #606060;
+    font-size: 10px;
+    height: 44px;
+}
+
+
+
+/* nav-center */
+
+
+.nav-center{
+    flex-basis: 728px;
+}
+
+#search-form{
+    /* flex-grow임 */
+    flex: 1; 
+    margin-left: 40px;
+    padding: 0px 4px;
+}
+#search-form input {
+    padding: 2px 6px;
+    border: 1px solid #ccc;
+    border-right: none;
+    border-radius: 2px 0px 0px 2px;
+    flex: 1;
+    height: 40px;
+}
+
+#search-form input::placeholder{
+    color: hsl(0,0%,53,3%);
+    font-size: 16px;
+}
+#search-form button{
+    border: 1px solid #d3d3d3;
+    border-radius:0px 2px 2px 0px;
+    height: 40px;
+    width: 64px;
+    background-color: #f8f8f8;
+    justify-content: center;
+}
+
+#search-form #mike-button{
+    background-color: #f9f9f9;
+    margin-left: 4px;
+    width: 41px;
+    border-radius: 50%;
+    border: none;
+}
+
+/* nav-right */
+.nav-right{
+    min-width: 225px;
+    justify-content: flex-end;
+}
+
+.nav-right , .nav-button {
+    margin-right: 8px;
+}
+
+#profile-button{
+    padding: 1px 6px;
+}
+
+#profile-button img{
+    margin: 0px 8px;
+    border-radius: 50% ;
+}
